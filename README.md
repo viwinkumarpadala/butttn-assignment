@@ -1,5 +1,8 @@
 # Butttn assignment Submission
 
+## Author
+Padala Viwin Kumar
+
 ## Description
 
 This repository contains the code for the Butttn assignment submission to build a dynamic drag and drop form builder.
@@ -45,8 +48,5 @@ POSTGRES_URL="POSTGRES_URL"
 POSTGRES_PRISMA_URL="POSTGRES_PRISMA_URL"
 POSTGRES_URL_NON_POOLING="POSTGRES_URL_NON_POOLING"
 
-
-## Author
-Padala Viwin Kumar
 
 
