@@ -9,7 +9,7 @@ export async function GET(request) {
         // Extract the id from the request URL pathname
         const url = new URL(request.url);
         const pathname = url.pathname;
-        const id = pathname.split('/').pop();
+        const id = pathname.split('/').pop(); 
         console.log(id)
 
         if (!id) {

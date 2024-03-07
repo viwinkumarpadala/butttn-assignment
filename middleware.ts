@@ -6,8 +6,7 @@ const ignoredRoutesRegex = /^\/api\/[a-zA-Z0-9-]+$/;
 
 // Define the route to be ignored
 const ignoredRoutes = [
-  ignoredRoutesRegex,
-  /^\/submit\/[a-zA-Z0-9-]+$/,
+  ignoredRoutesRegex
 ];
 
 // Configure the authMiddleware with the ignoredRoutes option
