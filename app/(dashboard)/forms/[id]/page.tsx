@@ -11,6 +11,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { format, formatDistance } from "date-fns";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
+import Addscripts from "@/components/Addscripts";
+import Iframelink from "@/components/Iframelink";
 
 
 interface Field {
@@ -200,10 +202,26 @@ formHTML += '<br></br><br></br></form></div><br></br><br></br><br></br>';
       </div>
       <div className="py-10 border-b border-muted">
         <div className="flex justify-between container">
-          <h1 className="text-4xl font-bold truncate">Embed form to your website: </h1>
+          <h1 className="text-4xl font-bold truncate">Copy HTML code: </h1>
         </div>
         <div className="container flex gap-2 items-center justify-between">
           <GenerateBootstrapForm formCode={formHTML} />
+        </div>
+      </div>
+      <div className="py-4 border-b border-muted">
+        <div className="flex justify-between container">
+          <h1 className="text-4xl font-bold truncate">Embed form using script: </h1>
+        </div>
+        <div className="container flex gap-2 items-center justify-between">
+          <Addscripts formURL={form.shareURL}></Addscripts>
+        </div>
+      </div>
+      <div className="py-4 border-b border-muted">
+        <div className="flex justify-between container">
+          <h1 className="text-4xl font-bold truncate">Embed form using Iframe: </h1>
+        </div>
+        <div className="container flex gap-2 items-center justify-between">
+          <Iframelink formURL={form.shareURL}></Iframelink>
         </div>
       </div>
       <div className="w-full pt-8 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 container">
