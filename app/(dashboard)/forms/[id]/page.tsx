@@ -40,13 +40,13 @@ async function FormDetailPage({
 }) {
   const { id } = params;
   const form = await GetFormById(Number(id));
-  console.log(form)
-  console.log(form?.content)
+  // console.log(form)
+  // console.log(form?.content)
   let formFields;
   if(form){
     formFields=JSON.parse(form.content)
   }
-  console.log(formFields)
+  // console.log(formFields)
   
   let formHTML ='<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">'
   formHTML+=`<style>
@@ -175,7 +175,7 @@ formHTML += `<br></br><br></br>
 formHTML += '<br></br><br></br></form></div><br></br><br></br><br></br>';
 
 
-  console.log(formHTML);
+  // console.log(formHTML);
 
   if (!form) {
     throw new Error("form not found");

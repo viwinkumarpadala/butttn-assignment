@@ -48,6 +48,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "cmdk": "^0.2.0",
+    "cors": "^2.8.5",
     "date-fns": "^2.30.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
@@ -69,6 +70,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "eslint-plugin-unused-imports": "^3.0.0",
     "prisma": "^5.10.2"
   }

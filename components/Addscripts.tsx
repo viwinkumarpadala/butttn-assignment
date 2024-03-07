@@ -9,8 +9,7 @@ import { toast } from "./ui/use-toast";
 function Addscripts({ formURL }: { formURL: string }) {
   const [mounted, setMounted] = useState(false);
 
-  const generatescript=`<script>
-document.location.href = "https://butttn-assignment.vercel.app/submit/${formURL}";
+  const generatescript=`<script> src = "https://butttn-assignment.vercel.app/api/${formURL}";
 </script>`
 
   useEffect(() => {

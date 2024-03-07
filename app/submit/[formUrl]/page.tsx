@@ -17,6 +17,7 @@ async function SubmitPage({
   }
 
   const formContent = JSON.parse(form.content) as FormElementInstance[];
+  console.log('script loaded')
 
   return <FormSubmitComponent formUrl={params.formUrl} content={formContent} />;
 }
