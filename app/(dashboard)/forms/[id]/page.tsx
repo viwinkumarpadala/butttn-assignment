@@ -84,7 +84,7 @@ async function FormDetailPage({
             color: #c59b08;
         }
     </style>`
-  formHTML+= '<form class="max-w-lg mx-auto">';
+  formHTML+= '<br></br><br></br><div class="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-6"><form class="max-w-lg mx-auto">';
   
 formFields.forEach((field: Field) => {
     switch (field.type) {
@@ -170,7 +170,7 @@ formHTML += `<br></br><br></br>
         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 focus:outline-none focus:shadow-outline">Submit</button>
     </div>
 `;
-formHTML += '<br></br><br></br></form>';
+formHTML += '<br></br><br></br></form></div><br></br><br></br><br></br>';
 
 
   console.log(formHTML);
