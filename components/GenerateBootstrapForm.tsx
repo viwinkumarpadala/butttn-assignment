@@ -6,7 +6,7 @@ import { Input } from "./ui/input";
 import { ImShare } from "react-icons/im";
 import { toast } from "./ui/use-toast";
 
-function FormLinkShare({ shareUrl }: { shareUrl: string }) {
+function GenerateBootstrapForm({ formCode }: { formCode: string }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -17,25 +17,25 @@ function FormLinkShare({ shareUrl }: { shareUrl: string }) {
     return null; 
   }
 
-  const shareLink = `${window.location.origin}/submit/${shareUrl}`;
+//   const shareLink = `${window.location.origin}/submit/${shareUrl}`;
   return (
     <div className="flex flex-grow gap-4 items-center">
-      <Input value={shareLink} readOnly />
+      <Input value={formCode} readOnly />
       <Button
         className="w-[250px]"
         onClick={() => {
-          navigator.clipboard.writeText(shareLink);
+          navigator.clipboard.writeText(formCode);
           toast({
             title: "Copied!",
-            description: "Link copied to clipboard",
+            description: "Code copied to clipboard",
           });
         }}
       >
         <ImShare className="mr-2 h-4 w-4" />
-        Share Link!
+        Share Code!
       </Button>
     </div>
   );
 }
 
-export default FormLinkShare;
+export default GenerateBootstrapForm;
