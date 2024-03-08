@@ -9,7 +9,7 @@ import { toast } from "./ui/use-toast";
 function Iframelink({ formURL }: { formURL: string }) {
   const [mounted, setMounted] = useState(false);
 
-  const generatescript=`<iframe src="https://butttn-assignment.vercel.app/submit/${formURL}" width="100%" height="100%" frameBorder = '0'; scrolling = 'no';></iframe>`
+  const generatescript=`<iframe src="https://butttn-assignment.vercel.app/submit/${formURL}" width="100%" height="100%" frameBorder = '0' scrolling = 'no'></iframe>`
 
   useEffect(() => {
     setMounted(true);
