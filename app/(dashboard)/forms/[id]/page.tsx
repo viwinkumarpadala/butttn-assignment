@@ -208,6 +208,7 @@ formHTML += '<br></br><br></br></form></div><br></br><br></br><br></br>';
           <GenerateBootstrapForm formCode={formHTML} />
         </div>
       </div>
+      <br></br>
       <div className="py-4 border-b border-muted">
         <div className="flex justify-between container">
           <h1 className="text-4xl font-bold truncate">Embed form using script: </h1>
@@ -216,6 +217,8 @@ formHTML += '<br></br><br></br></form></div><br></br><br></br><br></br>';
           <Addscripts formURL={form.shareURL}></Addscripts>
         </div>
       </div>
+      <br></br>
+      
       <div className="py-4 border-b border-muted">
         <div className="flex justify-between container">
           <h1 className="text-4xl font-bold truncate">Embed form using Iframe: </h1>
