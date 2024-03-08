@@ -12,7 +12,7 @@ import { format, formatDistance } from "date-fns";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import Addscripts from "@/components/Addscripts";
-import Iframelink from "@/components/Iframelink";
+// import Iframelink from "@/components/Iframelink";
 
 
 interface Field {
@@ -219,14 +219,14 @@ formHTML += '<br></br><br></br></form></div><br></br><br></br><br></br>';
       </div>
       <br></br>
       
-      <div className="py-4 border-b border-muted">
+      {/* <div className="py-4 border-b border-muted">
         <div className="flex justify-between container">
-          <h1 className="text-4xl font-bold truncate">Embed form using Iframe: </h1>
+          <h1 className="text-4xl font-bold truncate">Iframe: </h1>
         </div>
         <div className="container flex gap-2 items-center justify-between">
           <Iframelink formURL={form.shareURL}></Iframelink>
         </div>
-      </div>
+      </div> */}
       <div className="w-full pt-8 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 container">
         <StatsCard
           title="Total visits"
