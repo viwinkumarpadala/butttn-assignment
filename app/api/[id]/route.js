@@ -24,7 +24,7 @@ export async function GET(request) {
             
             iframe.src = 'https://butttn-assignment.vercel.app/submit/${id}';
             iframe.width = '100%';
-            iframe.height = '1000px';
+            iframe.height = '100%';
             iframe.frameBorder = '0';
             iframe.scrolling = 'no';
 
