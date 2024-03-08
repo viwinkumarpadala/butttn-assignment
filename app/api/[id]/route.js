@@ -26,7 +26,6 @@ export async function GET(request) {
             iframe.width = '100%';
             iframe.height = '100%';
             iframe.frameBorder = '0';
-            iframe.scrolling = 'no';
 
             
             document.body.appendChild(iframe);
