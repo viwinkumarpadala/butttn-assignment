@@ -14,5 +14,9 @@ const middleware = authMiddleware({
   ignoredRoutes
 });
 
+export const config = {
+  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+};
+
 // Export the middleware as default
 export default middleware;
