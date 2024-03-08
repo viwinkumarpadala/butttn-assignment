@@ -18,7 +18,19 @@ export async function GET(request) {
        
 
         const iframeCode = `
-            <iframe src="https://butttn-assignment.vercel.app/submit/${id}" width="100%" height="100%" frameBorder = '0' scrolling = 'no'></iframe>
+            
+            var iframe = document.createElement('iframe');
+            
+            
+            iframe.src = 'https://butttn-assignment.vercel.app/submit/${id}';
+            iframe.width = '100%';
+            iframe.height = '100%';
+            iframe.frameBorder = '0';
+            iframe.scrolling = 'no';
+
+            
+            document.body.appendChild(iframe);
+            
         `;
 
         // Return the script content as response with appropriate content type
