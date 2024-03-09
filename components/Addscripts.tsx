@@ -25,7 +25,7 @@ function Addscripts({ formURL }: { formURL: string }) {
       <Button
         className="w-[250px]"
         onClick={() => {
-          navigator.clipboard.writeText(formURL);
+          navigator.clipboard.writeText(generateScript);
           toast({
             title: "Copied!",
             description: "Link copied to clipboard",
