@@ -21,7 +21,7 @@ export async function GET(request) {
     var iframe = document.createElement('iframe');
     iframe.src = 'https://butttn-assignment.vercel.app/submit2/${id}';
     iframe.style.width = '500px';
-    iframe.style.height = '800px'; 
+    iframe.style.height = '700px'; 
     iframe.frameBorder = '0';
     iframe.style.overflow = 'hidden'; 
     
