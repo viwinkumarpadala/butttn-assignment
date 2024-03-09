@@ -5,69 +5,35 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { ImShare } from "react-icons/im";
 import { toast } from "./ui/use-toast";
-// import FormSubmitComponent from "./FormSubmitComponent";
-import { GetFormContentByUrl } from "@/actions/form";
-import { FormElementInstance } from "@/components/FormElements";
 
 function Addscripts({ formURL }: { formURL: string }) {
   const [mounted, setMounted] = useState(false);
-  const [formContent, setFormContent] = useState<FormElementInstance[] | null>(null);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchFormContent = async () => {
-      try {
-        const form = await GetFormContentByUrl(formURL);
-        if (!form) {
-          throw new Error("Form not found");
-        }
-        const parsedFormContent = JSON.parse(form.content) as FormElementInstance[];
-        setFormContent(parsedFormContent);
-        setMounted(true);
-      } catch (error) {
-        setErrorMessage((error as Error).message || "Error fetching form content");
-      }
-    };
+    setMounted(true);
+  }, []);
 
-    fetchFormContent();
-  }, [formURL]);
-
-  useEffect(() => {
-    if (!mounted || !formContent) return;
-
-    const generateScript = `<script src="https://butttn-assignment.vercel.app/api/${formURL}"></script>`;
-    const handleCopyScript = () => {
-      navigator.clipboard.writeText(generateScript);
-      toast({
-        title: "Copied!",
-        description: "Script copied to clipboard",
-      });
-    };
-
-    // Perform any additional logic here if needed
-
-  }, [mounted, formContent, formURL]);
-
-  if (errorMessage) {
-    return <div>{errorMessage}</div>;
+  if (!mounted) {
+    return null; 
   }
 
-  if (!mounted || !formContent) {
-    return null;
-  }
-
+  // const shareLink = `${window.location.origin}/submit/${shareUrl}`;
+  const generateScript = `<script src="https://butttn-assignment.vercel.app/api/${formURL}"></script>`;
   return (
     <div className="flex flex-grow gap-4 items-center">
-      {/* <FormSubmitComponent formUrl={formURL} content={formContent} /> */}
-      <Input value={`<script src="https://butttn-assignment.vercel.app/api/${formURL}"></script>`} readOnly />
+      <Input value={generateScript} readOnly />
       <Button
         className="w-[250px]"
         onClick={() => {
-          // Call the copy script function here
+          navigator.clipboard.writeText(formURL);
+          toast({
+            title: "Copied!",
+            description: "Link copied to clipboard",
+          });
         }}
       >
         <ImShare className="mr-2 h-4 w-4" />
-        Copy Scripts!
+        Copy scripts!
       </Button>
     </div>
   );
