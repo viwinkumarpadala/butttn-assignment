@@ -2,7 +2,7 @@
 import { authMiddleware } from "@clerk/nextjs";
 
 // Define the regular expression to match routes with the format /api/id
-const ignoredRoutesRegex = /^\/(api|submit)\/[a-zA-Z0-9-]+$/;
+const ignoredRoutesRegex = /^\/(api|submit|submit2)\/[a-zA-Z0-9-]+$/;
 
 // Define the route to be ignored
 const ignoredRoutes = [
